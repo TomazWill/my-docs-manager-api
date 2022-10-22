@@ -5,8 +5,8 @@
 
 ### Sobre o Projeto:
 - Inicialmente o projeto inicial segue na linha de desenvolvimento <br>
-  para que por meio de templates, seja possível gerar o arquivo final, <br>
-  e com o objetivo de passar somente os valores necessários para que a api faça o restante!
+  para que por meio de templates seja possível gerar o arquivo final (preenchido dinamicamente). <br>
+  Ele tem como objetivo, passar somente os valores necessários para que a api faça o restante!
 - O projeto vai abordar como ideia inicial a geração de 'Curriculum Vitae' <br>
   e ao decorrer do projeto poderá ser adicionado outros tipos de templates.
 
