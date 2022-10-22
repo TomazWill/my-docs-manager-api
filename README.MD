@@ -17,11 +17,11 @@
 
 ### Ideia inicial:
 
-<img alt="v1" width="350px" src="https://github.com/TomazWill/my-docs-manager-api/blob/master/img/v1.png" />
+<img alt="v1" width="550px" src="https://github.com/TomazWill/my-docs-manager-api/blob/master/img/v1.png" />
 
 <br>
 
-<img alt="v1 doc" width="350px" src="https://github.com/TomazWill/my-docs-manager-api/blob/master/img/v1_doc_template.png" />
+<img alt="v1 doc" width="550px" src="https://github.com/TomazWill/my-docs-manager-api/blob/master/img/v1_doc_template.png" />
 
 <br>
 
@@ -31,4 +31,4 @@
 
 ### Futuro:
 
-<img alt="v2" width="350px" src="https://github.com/TomazWill/my-docs-manager-api/blob/master/img/v2.png" />
+<img alt="v2" width="550px" src="https://github.com/TomazWill/my-docs-manager-api/blob/master/img/v2.png" />
