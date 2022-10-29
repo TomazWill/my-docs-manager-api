@@ -10,7 +10,7 @@ class Person:
                 phone_number: str = None,
                 email: str = None,
                 birth_date: str = None,
-                linkedin: str = None):
+                photo: str = None):
         self.name = name
         self.age = age
         self.address = address
@@ -18,6 +18,4 @@ class Person:
         self.phone_number = phone_number
         self.email = email
         self.birth_date = birth_date
-        self.linkedin = linkedin
-    
-    
+        self.photo = photo
