@@ -3,28 +3,32 @@ from datetime import datetime
 from docxtpl import DocxTemplate, InlineImage
 from docx.shared import Mm
 from model.Professional import Professional
+from model.Image import Image
+from definitions import IMAGE_DIR
 
 class CurriculumController:
     
     def create_curriculum(self, path_doc: str = None ):
         doc = DocxTemplate(path_doc) #TODO: When go to Container => str(settings.BASE_DIR) + path_doc
-        photo = InlineImage(doc, 'img/v2.png', width=Mm(20)) # width is in millimetres
-        # print(photo)
+        
+        # path_photo_resized = Image().image_resize(img_path_to_resize=f"{IMAGE_DIR}/photo_person.png", name_of_new_image="photo_person_v3")
+        photo = InlineImage(doc, f"{IMAGE_DIR}/photo_person.png", width=Mm(40), height=Mm(60))
+        
         # TODO: this data can be passed by JSON or by body request (when to be 'api rest')
         professional = Professional(
-            name = "José Martin Filho",
-            age = "26",
-            address = "Rua Antonio Bandeiras, 123",
-            city_and_state = "Araçatuba/SP",
-            phone_number = "+55 11 97456-7895",
-            email = "jose@hotmail.com",
-            birth_date = "20/11/1998",
-            linkedin = "https://www.linkedin.com/in/willian-tomaz-de-lima-a1aa81b6/",
-            formation = [],
-            certifications = [],
+            name                     = "Willian T. Lima",
+            age                      = "26",
+            address                  = "Rua Antonio Bandeiras, 123",
+            city_and_state           = "Araçatuba/SP",
+            phone_number             = "+55 11 97456-7895",
+            email                    = "will@hotmail.com",
+            birth_date               = "20/11/1998",
+            linkedin                 = "https://www.linkedin.com/in/willian-tomaz-de-lima-a1aa81b6/",
+            formation                = [],
+            certifications           = [],
             professional_experiences = "",
-            languages = [str],
-            photo = photo
+            languages                = [str],
+            photo                    = photo
         )
 
         professional_data_cv = {
@@ -42,24 +46,9 @@ class CurriculumController:
             'certifications':           professional.certifications,
             'professional_experiences': professional.professional_experiences,
             'languages':                professional.languages,
+            'photo':                    professional.photo
         }
 
         doc.render(professional_data_cv)
         doc.save(f"generated_doc_{datetime.today()}.docx")
-
-        # df = pd.read_csv('fake_data.csv')
-
-        # for index, row in df.iterrows():
-            # context = {
-            #     'hiring_manager_name': row['name'],
-            #     'address':             row['address'],
-            #     'phone_number':        row['phone_number'],
-            #     'email':               row['email'],
-            #     'job_position':        row['job'],
-            #     'company_name':        row['company']
-            # }
-
-            # context.update(my_personal_data)
-
-            # doc.render(context)
-            # doc.save(f"generated_doc_{index}.docx")
+        
